@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: rgb(245, 247, 250);
+  --color-background: rgb(27, 32, 41);
+}
+
+body {
+  margin: 0;
+  /* padding: 0; L'élément body n'a pas de padding, donc la ligne ici est considérée comme code inactif */
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  /* centrer verticalement */
+  align-items: center;
+  /* aligner horizontalement mon titre h1 */
+  height: 100vh;
+  /* 100 % de la hauteur de la page */
+}
+
+.logo {
+  width: 150px;
+  /* Ajuster la taille de mon image */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* espacement équilibrer */
+  width: 100%;
+  /* prend 100% de la largeur du pied de page */
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Responsive : Adaptation pour mobile */
+
+@media screen and (max-width: 768px) {
+  footer {
+    /* adapter mes éléments "p" en colonne centrer au passage de moins de 768px */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
